@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ScollViewMoveKeyboard.MainPage">
+
+    
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Spacing="15" Grid.Row="1" Grid.Column="0">
+                <Entry Placeholder="Username" TextColor="Black" FontSize="20" HeightRequest="50" Keyboard="Email" Text="{ Binding Username }" />
+                <Entry Placeholder="Password" TextColor="Black" FontSize="20" HeightRequest="50" IsPassword="True" Text="{ Binding Password }" />
+                <Button Text="Login" Clicked="Login_Button_Clicked" BorderColor="Green" TextColor="Green" BorderWidth="1" Margin="0,20,0,20"/>
+                <Button Text="Register new user" Clicked="Register_Button_Clicked"/>
+            </StackLayout>
+
+        </Grid>
+
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ScollViewMoveKeyboard.RegisterPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Close" Order="Primary" Clicked="Close_ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Spacing="15" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0">
+            <Entry Placeholder="Username" TextColor="Black" FontSize="20" HeightRequest="50" />
+            <Entry Placeholder="Password" TextColor="Black" FontSize="20" HeightRequest="50" />
+            <Button Text="Register" Clicked="Register_Button_Clicked" BorderColor="Green" TextColor="Green" BorderWidth="1" Margin="0,20,0,20"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
