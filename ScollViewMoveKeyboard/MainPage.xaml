@@ -19,10 +19,38 @@
 
 
             <StackLayout Spacing="15" Grid.Row="1" Grid.Column="0">
-                <Entry Placeholder="Username" TextColor="Black" FontSize="20" HeightRequest="50" Keyboard="Email" Text="{ Binding Username }" />
-                <Entry Placeholder="Password" TextColor="Black" FontSize="20" HeightRequest="50" IsPassword="True" Text="{ Binding Password }" />
-                <Button Text="Login" Clicked="Login_Button_Clicked" BorderColor="Green" TextColor="Green" BorderWidth="1" Margin="0,20,0,20"/>
-                <Button Text="Register new user" Clicked="Register_Button_Clicked"/>
+
+                <Entry Placeholder="Användarnamn"
+                       TextColor="Black"
+                       FontSize="20"
+                       HeightRequest="50"
+                       Keyboard="Email"
+                       Text="{ Binding Username }"
+                       AutomationProperties.IsInAccessibleTree="True"
+                       AutomationProperties.HelpText="Skriv användarnamn"/>
+
+                <Entry Placeholder="Lösenord"
+                       TextColor="Black"
+                       FontSize="20"
+                       HeightRequest="50"
+                       IsPassword="True"
+                       Text="{ Binding Password }"
+                       AutomationProperties.IsInAccessibleTree="True"
+                       AutomationProperties.HelpText="Skriv lösenord"/>
+
+                <Button Text="Logga in"
+                        Clicked="Login_Button_Clicked"
+                        BorderColor="Green"
+                        TextColor="Green"
+                        BorderWidth="1"
+                        Margin="0,20,0,20"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="Logga in"/>
+
+                <Button Text="Registera ny användare"
+                        Clicked="Register_Button_Clicked"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.HelpText="Skapa konto"/>
             </StackLayout>
 
         </Grid>
