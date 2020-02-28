@@ -25,7 +25,7 @@ namespace ScollViewMoveKeyboard
         async void Login_Button_Clicked(System.Object sender, System.EventArgs e)
         {
 
-            CustomActivityIndicatorPage.Display();
+            CustomActivityIndicatorPage.Display("Loggar in");
             
             bool authorized = await viewModel.Authorize();
 

@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="CustomNavigationPage.xaml.cs" />
+    <Compile Remove="AccessibilityRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="CustomNavigationPage.xaml" />

@@ -9,9 +9,11 @@ namespace ScollViewMoveKeyboard
     public partial class CustomActivityIndicatorPage : Rg.Plugins.Popup.Pages.PopupPage
     {
 
-        public static async void Display()
+        public string HelpText { get; set; } = String.Empty;
+
+        public static async void Display(string HelpText)
         {
-            await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(new CustomActivityIndicatorPage());
+            await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(new CustomActivityIndicatorPage(HelpText));
         }
 
         public static async void Pop()
@@ -19,9 +21,12 @@ namespace ScollViewMoveKeyboard
             await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopAsync();
         }
 
-        public CustomActivityIndicatorPage()
+        public CustomActivityIndicatorPage(string HelpText)
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            this.HelpText = HelpText;
+            BindingContext = this;
+
         }
 
         protected override void OnAppearing()

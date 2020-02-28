@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ScollViewMoveKeyboard"
              mc:Ignorable="d"
              x:Class="ScollViewMoveKeyboard.MainPage">
 
@@ -22,8 +23,8 @@
 
                 <Entry Placeholder="Användarnamn"
                        TextColor="Black"
-                       FontSize="20"
-                       HeightRequest="50"
+                       FontSize="Body"
+                       MinimumHeightRequest="50"
                        Keyboard="Email"
                        Text="{ Binding Username }"
                        AutomationProperties.IsInAccessibleTree="True"
@@ -31,8 +32,8 @@
 
                 <Entry Placeholder="Lösenord"
                        TextColor="Black"
-                       FontSize="20"
-                       HeightRequest="50"
+                       FontSize="Body"
+                       MinimumHeightRequest="50"
                        IsPassword="True"
                        Text="{ Binding Password }"
                        AutomationProperties.IsInAccessibleTree="True"
@@ -41,14 +42,16 @@
                 <Button Text="Logga in"
                         Clicked="Login_Button_Clicked"
                         BorderColor="Green"
+                        FontSize="Body"
                         TextColor="Green"
                         BorderWidth="1"
                         Margin="0,20,0,20"
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.HelpText="Logga in"/>
 
-                <Button Text="Registera ny användare"
+                <Button Text="Skapa konto"
                         Clicked="Register_Button_Clicked"
+                        FontSize="Body"
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.HelpText="Skapa konto"/>
             </StackLayout>
